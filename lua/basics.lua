@@ -36,7 +36,7 @@ function M.setup(opts)
 		vim.o.laststatus = config.options.laststatus
 		vim.o.wrap = config.options.wrap
 		vim.o.undofile = config.options.undofile
-		vim.o.whichwrap = config.options.undofile
+		vim.o.whichwrap = config.options.whichwrap
 	end
 end
 

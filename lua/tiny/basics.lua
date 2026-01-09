@@ -16,7 +16,8 @@ local config = {
 		laststatus = 3,
 		wrap = false,
 		undofile = true,
-		whichwrap = vim.o.whichwrap .. "<>[]hl"
+		whichwrap = vim.o.whichwrap .. "<>[]hl",
+		diagnostics_text = true,
 	}
 	-- add sum stuff here
 }
@@ -39,5 +40,8 @@ function M.setup(opts)
 		vim.o.whichwrap = config.options.whichwrap
 	end
 end
+
+vim.diagnostic.config({ virtual_text = config.options.diagnostics_text })
+
 
 return M
